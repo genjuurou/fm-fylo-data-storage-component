@@ -8,12 +8,6 @@
   
   <title>Frontend Mentor | Fylo data storage component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
@@ -44,32 +38,33 @@
   </script>
 </head>
 <body class="relative flex flex-col justify-center items-center min-h-screen bg-mobile font-raleway text-white">
-  <header class="w-[87%] px-[2.6rem] py-[2rem] bg-dark-blue">
+  <header class="w-[87%] px-[2.6rem] py-[2rem] rounded-lg rounded-tr-[6.25rem] bg-dark-blue">
     <img src="images/logo.svg" alt="Fylo's logo">
-    <menu class="flex items-center space-x-4">
+    <menu class="flex items-center mt-[2rem] space-x-4">
       <li>
-        <button class="w-[3rem] h-[3rem] rounded-lg bg-very-dark-blue">
-          <img src="images/icon-document.svg" alt="" title="Document" class="m-auto">
+        <button class="w-[3rem] h-[3rem] rounded-lg bg-very-dark-blue" title="Document">
+          <img src="images/icon-document.svg" alt="" class="m-auto">
         </button>
       </li>
       <li>
-        <button class="w-[3rem] h-[3rem] rounded-lg bg-very-dark-blue">
-          <img src="images/icon-folder.svg" alt="" title="Folder" class="m-auto">
+        <button class="w-[3rem] h-[3rem] rounded-lg bg-very-dark-blue" title="Folder">
+          <img src="images/icon-folder.svg" alt="" class="m-auto">
         </button>
       </li>
       <li>
-        <button class="w-[3rem] h-[3rem] rounded-lg bg-very-dark-blue">
-          <img src="images/icon-upload.svg" alt="" title="Upload" class="m-auto">
+        <button class="w-[3rem] h-[3rem] rounded-lg bg-very-dark-blue" title="Upload">
+          <img src="images/icon-upload.svg" alt="" class="m-auto">
         </button>
       </li>
     </menu>
   </header>
-  <main class="w-[87%] mt-4 bg-dark-blue">
-    <h1>185 GB Left</h1>
-
-    <label for="storage">You’ve used <em>815 GB</em> of your storage</label>
+  <main class="relative w-[87%] p-[2rem] mt-4 bg-dark-blue h-[160px] rounded-lg text-[.875rem] text-pale-blue">
+    <h1 class="absolute bottom-0 left-1/2 translate-x-[-50%] translate-y-[50%] block flex justify-center items-center px-[1.375rem] py-[.375rem] rounded-lg bg-white font-bold">
+      <span class="text-[2.5rem] text-very-dark-blue">185 </span>
+      <span class="ml-[.5rem] text-[.8125rem] tracking-[.0625rem] text-grayish-blue whitespace-nowrap uppercase">GB Left</span>
+    </h1>
+    <label for="storage" class="block text-center">You’ve used <em class="font-bold not-italic">815 GB</em> of your storage</label>
     <meter id="storage" min="0" max="1000" value="815"></meter>
-
   </main>
 
   <!-- You’ve used 815 GB of your storage
@@ -84,8 +79,8 @@
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
   <footer class="absolute bottom-0 text-[.6875rem] ">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-white">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/genjuurou" target="_blank" class="text-white">Genjuurou</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="font-bold">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/genjuurou" target="_blank" class="font-bold">Genjuurou</a>.
   </footer>
 </body>
 </html>
