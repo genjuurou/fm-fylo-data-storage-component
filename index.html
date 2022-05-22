@@ -23,11 +23,12 @@
             'mobile': "url('images/bg-mobile.png')",
           },
           colors: {
-            'link': 'hsl(228, 45%, 44%)',
             'pale-blue': 'hsl(243, 100%, 93%)',
             'grayish-blue': 'hsl(229, 7%, 55%)',
             'dark-blue': 'hsl(228, 56%, 26%)',
             'very-dark-blue': 'hsl(229, 57%, 11%)',
+            'meter-gradient-start': 'hsl(6, 100%, 80%)',
+            'meter-gradient-end': 'hsl(335, 100%, 65%)'
           },
           fontFamily: {
             'raleway': ['Raleway', 'sans-serif'],
@@ -38,9 +39,9 @@
   </script>
 </head>
 <body class="relative flex flex-col justify-center items-center min-h-screen bg-mobile font-raleway text-white">
-  <header class="w-[87%] px-[2.6rem] py-[2rem] rounded-lg rounded-tr-[6.25rem] bg-dark-blue">
+  <header class="w-[87%] px-[2.6rem] py-[2.3rem] rounded-lg rounded-tr-[6.25rem] bg-dark-blue">
     <img src="images/logo.svg" alt="Fylo's logo">
-    <menu class="flex items-center mt-[2rem] space-x-4">
+    <menu class="flex items-center mt-[2.1rem] space-x-4">
       <li>
         <button class="w-[3rem] h-[3rem] rounded-lg bg-very-dark-blue" title="Document">
           <img src="images/icon-document.svg" alt="" class="m-auto">
@@ -58,26 +59,24 @@
       </li>
     </menu>
   </header>
-  <main class="relative w-[87%] p-[2rem] mt-4 bg-dark-blue h-[160px] rounded-lg text-[.875rem] text-pale-blue">
+  <main class="relative w-[87%] p-[2rem] pb-[3.2rem] mt-4 bg-dark-blue rounded-lg text-[.875rem] text-pale-blue">
     <h1 class="absolute bottom-0 left-1/2 translate-x-[-50%] translate-y-[50%] block flex justify-center items-center px-[1.375rem] py-[.375rem] rounded-lg bg-white font-bold">
       <span class="text-[2.5rem] text-very-dark-blue">185 </span>
       <span class="ml-[.5rem] text-[.8125rem] tracking-[.0625rem] text-grayish-blue whitespace-nowrap uppercase">GB Left</span>
     </h1>
-    <label for="storage" class="block text-center">You’ve used <em class="font-bold not-italic">815 GB</em> of your storage</label>
-    <meter id="storage" min="0" max="1000" value="815"></meter>
+    <p class="text-center">You’ve used <em class="font-bold not-italic">815 GB</em> of your storage</p>
+    <div class="mt-[.875rem]" aria-hidden="true">
+      <div class="p-[.1875rem] rounded-full bg-very-dark-blue">
+        <div class="flex justify-end items-center w-[81.5%] h-[.875rem] rounded-full bg-gradient-to-r from-meter-gradient-start to-meter-gradient-end">
+          <div class="w-[.625rem] h-[.625rem] mr-[.125rem] bg-white rounded-full"></div>
+        </div>
+      </div>
+      <div class="flex justify-between items-center mt-[.5rem] text-[.75rem] font-bold">
+        <span>0 GB</span>
+        <span>1000 GB</span>
+      </div>
+    </div>
   </main>
-
-  <!-- You’ve used 815 GB of your storage
-
-  185 GB Left
-  
-  0 GB
-  1000 GB -->
-  
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
   <footer class="absolute bottom-0 text-[.6875rem] ">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="font-bold">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/genjuurou" target="_blank" class="font-bold">Genjuurou</a>.
