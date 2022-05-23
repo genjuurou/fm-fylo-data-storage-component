@@ -37,6 +37,22 @@
       }
     }
   </script>
+
+<style type="text/tailwindcss">
+  @layer components {
+    .triangle::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 1.36rem;
+      height: 1.36rem;
+      background-image: linear-gradient(to top right, transparent 50%, white 0);
+      transform: translateY(100%);
+    }
+  }
+</style>
 </head>
 <body class="relative flex flex-col justify-center items-center min-h-[41.75rem] h-screen bg-very-dark-blue bg-mobile bg-no-repeat bg-bottom font-raleway text-white md:min-h-[25rem] md:bg-desktop">
   <div class="w-[87%] flex flex-col items-center justify-center gap-y-[1rem] md:flex-row md:items-end md:gap-x-[1.875rem]">
@@ -63,7 +79,7 @@
       </menu>
     </header>
     <main class="relative w-full p-[2rem] pb-[3.2rem] max-w-[20.3125rem] bg-dark-blue rounded-lg text-[.875rem] text-pale-blue shadow-2xl md:max-w-[33.75rem] md:p-[2.3rem]">
-      <h1 class="absolute bottom-0 left-1/2 translate-x-[-50%] translate-y-[50%] block flex justify-center items-center px-[1.375rem] py-[.375rem] rounded-lg bg-white font-bold md:bottom-auto md:left-auto md:top-0 md:right-0 md:translate-y-[-65%] md:translate-x-[-2.3rem]">
+      <h1 class="absolute bottom-0 left-1/2 translate-x-[-50%] translate-y-[50%] block flex justify-center items-center px-[1.375rem] py-[.375rem] rounded-lg bg-white font-bold md:bottom-auto md:left-auto md:top-0 md:right-0 md:translate-y-[-65%] md:translate-x-[-2.3rem] md:rounded-br-none md:triangle">
         <span class="text-[2.5rem] text-very-dark-blue">185 </span>
         <span class="ml-[.5rem] text-[.8125rem] tracking-[.0625rem] text-grayish-blue whitespace-nowrap uppercase">GB Left</span>
       </h1>
